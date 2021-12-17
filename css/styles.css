@@ -1,0 +1,951 @@
+html {
+    font-size: 62.5%;
+}
+
+/* Typography */
+
+.sr-only {
+    display: none;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 4.8rem;
+    color: #072448;
+}
+
+.about-us h2 {
+    color: white;
+}
+
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #072448;
+}
+
+.about-us-services h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #072448;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #072448;
+}
+
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #072448;
+}
+
+.about-us p {
+    color: white;
+}
+
+header a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #072448;
+}
+
+header a:hover {
+    opacity: 50%;
+    transition: 0.5s ease all;
+}
+
+.benefits-btn a, .how-it-works-btn a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #072448;
+} 
+
+.about-us-services a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #072448;
+    text-decoration: none;
+    border-bottom: 0.2rem solid #f3d900;
+}
+
+.about-us-services p {
+    color: #072448;
+}
+
+.sign-up h2, .sign-up p {
+    color: white;
+}
+
+.sign-up h2 {
+    line-height: 6rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #1a212b;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.copyright p {
+    color: white;
+}
+
+.arrowBig {
+    font-size: 3rem;
+    color: #1a212b;
+}
+
+.emphasize {
+    color: #072448;
+
+}
+/* animations */
+
+
+.search:hover .emphasize {
+    animation: rotate-red 2s ease-in;
+}
+
+@keyframes rotate-red {
+    10% {
+        color: red;
+    }
+
+
+    50% {
+        transform: rotate(180deg);
+    }
+}
+
+/* about us section animations */
+.about-us:hover .column:nth-of-type(odd) {
+    animation: rotate 0.5s ease-in;
+}
+
+.about-us:hover .column:nth-of-type(even) {
+    animation: rotate-opposite 0.5s ease-in;
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-opposite {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+/* move business animations */
+@media only screen and (min-width: 1160px) {
+
+    .sign-up:hover h2 {
+        animation: left-to-right 2s ease-in forwards;
+    }
+    
+    @keyframes left-to-right {
+        0% {
+            color: red;
+        }
+    
+        20% {
+            transform: scaleY(1.1);
+        }
+    
+        40% {
+            transform: scaleX(1.5);
+    
+        }
+    
+        60% {
+            transform: translateX(100%);
+        }
+    }
+
+
+}
+
+
+/* benefit cards */
+
+
+.benefits:hover .benefits-card {
+    animation: scale-rotate 2s ease-in forwards;
+}
+
+@keyframes scale-rotate {
+    10% {
+        transform: scale(1.5);
+    }
+
+    30% {
+        transform: rotate(180deg);
+    }
+
+    40% {
+        transform: rotate(180deg);
+    }
+}
+
+
+
+
+/* header */
+
+header {
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: white;
+}
+/* inner container - change later */
+.inner-container {
+    padding: 0 2.5rem;
+}
+
+.small-flex {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0rem 0.5rem 1rem -1rem #888888;
+    margin-bottom: 2.3rem;
+}
+
+
+.toggle {
+    background-color: #f3d900;
+    height: 6.5rem;
+    width: 6.5rem;
+    border-radius: 5rem;
+    padding: 2.8rem 1.8rem;
+    cursor: pointer;
+}
+
+.toggle div {
+    width: 2.9rem;
+    height: 0.1rem;
+    background-color: #072448;
+    margin-bottom: 0.6rem;
+}
+
+header a {
+    text-decoration: none;
+    display: block;
+}
+
+header li {
+    border-top: 0.2rem solid #d3d3d3;
+    padding: 2rem 0;
+    position: relative;
+}
+
+header li:last-of-type {
+  border-bottom: 0.2rem solid #d3d3d3;
+}
+
+/* hiding nav */
+
+
+nav {
+    position: absolute;
+    background-color: #ede8f1;
+    left: 0;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    transition:  all 0.5s ease-in-out;
+}
+
+/* showing nav */
+
+.show-nav {
+    max-height: 50rem;
+    padding-left: 2.5rem;
+}
+
+/* search section - get back to later */ 
+
+.search {
+    padding-bottom: 4.9rem;
+}
+
+.search h2 {
+    line-height: 4.8rem;
+    margin-bottom: 1rem;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form input {
+    height: 4.1rem;
+    width: 27.2rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-right: none;
+}
+
+.submit-btn {
+    background-color: #072448;
+    height: 4.1rem;
+    width: 4.2rem;
+    outline: none;
+    border: none;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+
+.search-icon {
+    height: 2.2rem;
+    width: 2.2rem;
+}
+
+/* About Us Section */
+
+.about-us {
+    background-color: #072448;
+    padding: 5rem 0;
+}
+
+.about-us h2 {
+    margin-bottom: 1.2rem;
+}
+
+.about-us p {
+    margin-bottom: 3.2rem;
+}
+
+.how-it-works-btn {
+    background-color: #f3d900;
+    width: 19.4rem;
+    border-radius: 1.5rem;
+    margin-bottom: 2.2rem;
+}
+
+.how-it-works-btn:hover {
+    opacity: 80%;
+    transition: 0.5s ease all;
+}
+
+.how-it-works-btn a {
+    display: flex;
+    width: 20rem;
+    text-decoration: none;
+    align-items: center;
+    position: relative;
+    right: 1rem;
+}
+
+.about-us-services .column  {
+    background-color: white;
+    padding: 5rem 1.2rem;
+}
+
+.about-us-services .column:first-of-type {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.about-us-services .column  svg {
+    margin-bottom: 2.5rem;
+}
+
+.about-us-services .column h3 {
+    margin-bottom: 2rem;
+}
+
+.about-us-services .column p {
+    margin-bottom: 3.5rem;
+}
+
+.about-us-services .column  a {
+    padding-bottom: 0.4rem;
+}
+
+.about-us-services .column:last-of-type {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+/* Services Section */
+
+.services {
+    padding: 5.5rem 0;
+}
+
+.services .inner-container {
+    padding-right: 0;
+}
+
+.services h2 {
+    margin-bottom: 1.5rem;
+}
+
+.service-card {
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.service-card img {
+    margin-right: 1.3rem;
+}
+
+.services .column {
+    flex: 0 0 35rem;
+}
+
+.horizontal-content {
+    display: flex;
+    overflow: scroll;
+}
+
+.horizontal-content::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+}
+
+/* benefits content */
+.benefits {
+    background-color: #eaedef;
+    padding: 5.6rem 0;
+}
+
+.benefits h2 {
+    line-height: 4.8rem;
+    margin-bottom: 2.6rem;
+}
+
+.benefits p:first-of-type {
+    margin-bottom: 3rem;
+}
+/* backgrounds */
+.solutions-bg {
+    background: url(../img/solutions-sm.jpg);
+    height: 9rem;
+    background-size: cover;
+    background-position: center right;
+    width: 100%;
+}
+
+.resource-bg {
+    background: url(../img/resources-sm.jpg);
+    height: 9rem;
+    background-size: cover;
+    background-position: center right;
+    width: 100%;
+}
+
+.support-bg {
+    background: url(../img/support-sm.jpg);
+    height: 9rem;
+    background-size: cover;
+    background-position: center right;
+    width: 100%;
+}
+
+/* benefits content */
+
+.benefit-content {
+    padding: 2.5rem 1.2rem;
+    background-color: white;
+}
+
+.benefit-content h3 {
+    margin-bottom: 1.9rem;
+}
+
+.benefits-card {
+    margin-bottom: 4.6rem;
+    box-shadow: 0.2rem 0.2rem 0.8rem #888888;
+}
+
+/* benefits button */
+
+.benefits-btn {
+    background-color: #f3d900;
+    width: 19.4rem;
+    border-radius: 1.5rem;
+    margin-bottom: 2.2rem;
+}
+
+
+
+.benefits-btn:hover {
+  opacity: 80%;
+  transition: 0.5s ease all;
+}
+
+
+.benefits-btn a {
+    display: flex;
+    width: 20rem;
+    text-decoration: none;
+    align-items: center;
+    position: relative;
+    right: 1rem;
+}
+
+/* sign up section */
+
+.sign-up {
+    background-color: #072448;
+    padding-top: 5.6rem;
+    padding-bottom: 4.8rem;
+}
+
+.sign-up h2 {
+    margin-bottom: 3rem;
+}
+
+.sign-up p {
+    margin-bottom: 3rem;
+}
+
+.sign-up form {
+    display: flex;
+    align-items: center;
+}
+
+.sign-up input {
+    height: 4.1rem;
+    width: 27.2rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-right: none;
+}
+
+.sign-up input:focus {
+    outline: none;
+}
+
+.sign-up-btn {
+    height: 3.8rem;
+    width: 4.2rem;
+    outline: none;
+    border: none;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+
+/* footer */
+
+footer {
+    padding-top: 5rem;
+}
+
+footer img {
+    margin-bottom: 4.2rem;
+}
+
+footer h4 {
+    margin-bottom: 2.8rem;
+}
+
+footer li {
+    margin-bottom: 1.7rem;
+}
+
+footer div div div li:last-of-type {
+    margin-bottom: 3.3rem;
+}
+
+footer div div div:nth-of-type(3) li:last-of-type {
+    margin-bottom: 5.9rem;
+    border-bottom: 0.2rem solid #f3d900;
+    width: 13%;
+}
+
+.copyright {
+    background-color: #072448;
+    padding: 3.2rem 2.5rem;
+}
+
+/* 750 px - responsive */
+
+@media only screen and (min-width: 750px) {
+
+    /* how can we help? section */
+
+    .search h2 {
+        margin-bottom: 3rem;
+    }
+
+    .search input {
+        width: 90%;
+    }
+
+    /* how it works section */
+
+    .about-us-services .flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .about-us-services .column {
+        margin-bottom: 1.7rem;
+        width: 49%;
+        border-radius: 2rem;
+    }
+
+    /* services content */
+
+    .services .column {
+        flex: 0 0 27rem;
+    }
+
+    /* benefits */
+    .benefits-card {
+        display: flex;
+    }
+
+    .solutions-bg {
+        background: url(../img/solutions-lg.jpg);
+        height: 22.5rem;
+        background-size: cover;
+        background-position: center right;
+        width: 50%;
+    }
+    
+    .resource-bg {
+        background: url(../img/resources-lg.jpg);
+        height: 22.5rem;
+        background-size: cover;
+        background-position: center right;
+        width: 50%;
+    }
+    
+    .support-bg {
+        background: url(../img/support-lg.jpg);
+        height: 22.5rem;
+        background-size: cover;
+        background-position: center right;
+        width: 50%;
+    }
+
+    .benefit-content {
+        width: 50%;
+    }
+
+    /* sign up */
+
+    .sign-up input {
+        width: 90%;
+    }
+
+    /* footer */
+    footer .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1160px) {
+    
+    .toggle {
+        display: none;
+    }
+
+    header .big-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        padding-top: 2.1rem;
+        box-shadow: none;
+    }
+
+    .small-flex {
+        box-shadow: none;
+    }
+
+    header {
+        box-shadow: 0rem 0.5rem 1rem -1rem #888888;
+    }
+
+        
+    header a {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: #072448;
+    }
+
+
+    header nav {
+        position: static;
+        width: auto;
+        max-height: 200px;
+        overflow: visible;
+        padding: 0;
+    }
+
+    .menu {
+        display: flex;
+        background-color: white;
+    }
+
+    header li {
+        border: none;
+        margin-right: 2.9rem;
+        padding: 0;
+    }
+
+    .menu li:last-of-type {
+        border:none;
+    }
+
+    header {
+        margin-bottom: 5rem;
+    }
+    /* search */
+
+    .search input {
+        width: 56.8rem;
+    }
+    /* about us section */
+
+    .about-us .flex {
+        display: flex;
+    }
+
+    .about-us-intro {
+        margin-right: 3.7rem;
+    }
+
+    /* services */
+
+    .services .column {
+        flex: 0 0 28rem;
+    }
+
+    /* benefits */
+
+    .benefits .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .benefits-card {
+        flex-direction: column;
+        width: 30%;
+    }
+
+    .solutions-bg {
+        height: 22.5rem;
+        width: 100%;
+    }
+    
+    .resource-bg {
+        height: 22.5rem;
+        width: 100%;
+    }
+    
+    .support-bg {
+        height: 22.5rem;
+        width: 100%;
+    }
+
+    .benefit-content {
+        width: 100%;
+    }
+
+    /* sign up */
+
+    .sign-up input {
+        width: 56.8rem;
+    }
+
+    .inner-container, .copyright-text {
+        max-width: 116rem;
+        margin: auto;
+    }
+
+    footer .inner-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer a.logo {
+        padding-top: 0;
+    }
+
+    footer .inner-container .flex {
+        width: 65%;
+        justify-content: space-between;
+    }
+
+    .inner-container {
+        max-width: 116rem;
+        margin: auto;
+    }
+}
+
+
+/* how-it-works page */
+
+.instructions {
+    padding-top: 5.2rem;
+    padding-bottom: 7.5rem;
+}
+
+.instructions h2 {
+    margin-bottom: 2.3rem;
+}
+
+.instructions h3 {
+    margin-bottom: 2.8rem;
+}
+
+.instructions p {
+    margin-bottom: 5.5rem;
+}
+
+/* form */
+
+.project-bg {
+    height: 22.2rem;
+    background: url(../img/form-bg-sm.jpg);
+    background-size: cover;
+    background-position: top right;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.project-bg h2 {
+    padding-top: 9rem;
+}
+
+.project-form {
+    background-color: #072448;
+    color: white;
+}
+.project-form p {
+    margin: 3rem 0;
+    color: white;
+}
+
+.project-form label {
+    display: block;
+}
+
+span {
+    color: #ff0000;
+}
+
+
+.project-form input {
+    height: 4rem;
+    border-radius: 1rem;
+    margin-bottom: 3.3rem;
+    width: 100%;
+    border: none;
+    background-color: white;
+}
+
+.project-form select {
+    height: 4rem;
+    border-radius: 1rem;
+    margin-bottom: 3.3rem;
+    width: 100%;
+    border: none;
+    background-color: white;
+}
+
+.project-form textarea {
+    height: 30rem;
+    border-radius: 1rem;
+    margin-bottom: 3.3rem;
+    width: 100%;
+    border: none;
+    background-color: white;
+}
+
+.project-form input[type=submit] {
+    width: 12.9rem;
+    background-color:  #f3d900;
+    cursor: pointer;
+    color: #344256;
+    font-size: 1.6rem;
+
+}
+
+/* validation */
+
+.project-form input:not(:placeholder-shown):valid,
+.project-form select:not(:placeholder-shown):valid {
+	background-image: url(../img/checkmark.svg);
+    background-repeat: no-repeat;
+    background-position: 98% center;
+}
+
+.project-form input[type=submit]:not(:placeholder-shown):valid {
+    background-image: none;
+}
+
+.project-form input:invalid:not(:focus):not(:placeholder-shown):invalid,
+.project-form select:invalid:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid red;
+}
+
+
+@media only screen and (min-width: 750px) {
+    .instructions .flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .instructions .flex div {
+        width: 49%;
+    }
+
+    .project-bg  {
+        height: 24.2rem;
+    }
+
+    .project-form .flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .project-form .flex div {
+        width: 49%;
+    }
+}
+
+@media only screen and (min-width: 1160px) {
+
+    .project-form select {
+        width: 19.8rem;
+    }
+
+    .project-form textarea {
+        height: 22.5rem;
+        width: 56.8rem;
+    }
+}
